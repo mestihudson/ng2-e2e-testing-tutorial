@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Tutorial teaching e2e testing with protractor",
   "scripts": {
-    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+    "start": "concurrently \"npm run tsc:w\" \"npm run lite\"",
     "pretest": "concurrently \"tsc -w\" \"http-server\" ",
     "e2e": "protractor protractor.config.js",
     "lite": "lite-server",
