@@ -1,0 +1,18 @@
+version: "2"
+services:
+  protractor:
+    container_name: protractor
+    build:
+      context: .
+      dockerfile: Protractor.df
+    image: protractor
+    ports:
+    - "3000:3000"
+    - "3001:3001"
+    - "8080:8080"
+    volumes:
+    - "../:/workspace"
+    working_dir: /workspace
+#     command: ["/workspace/docker/protractor.sh"]
+#     docker run --rm --env-file ./docker-env --env SUITE=$SUITE -v $(pwd):/protractor/
+# <>:5000/your/path/to/image protractor.conf.js
